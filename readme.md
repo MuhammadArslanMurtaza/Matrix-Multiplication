@@ -25,6 +25,6 @@ put the matrix data in json form like this
 	 }
 }
 
-Matrix name must be 'frist' and 'second'
+Matrix name must be 'frist' and 'second' and Strat Matrix Index from '0'
 
 Thank's
