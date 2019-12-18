@@ -27,4 +27,6 @@ put the matrix data in json form like this
 
 Matrix name must be 'frist' and 'second' and Strat Matrix Index from '0'
 
+Please see the "strat the app.png"and "test in postman.png" for better understanding for testing the app
+
 Thank's
