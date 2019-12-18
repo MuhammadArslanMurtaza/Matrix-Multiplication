@@ -14,4 +14,4 @@
 $router->get('/', function () use ($router) {
     return $router->app->version();
 }); 
-$router->get('/matrixe', "matrixController@index");
+$router->get('/matrix', "matrixController@index");

@@ -8,6 +8,7 @@ use Illuminate\Auth\Access\AuthorizationException;
 use Illuminate\Database\Eloquent\ModelNotFoundException;
 use Laravel\Lumen\Exceptions\Handler as ExceptionHandler;
 use Symfony\Component\HttpKernel\Exception\HttpException;
+use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
 use ErrorException;
 
 class Handler extends ExceptionHandler
@@ -46,10 +47,9 @@ class Handler extends ExceptionHandler
      */
     public function render($request, Exception $exception)
     {
-        // if($exception instanceof ErrorException){
-        //     return response()->json(["message"=>"Matrix name muste be 'frist' and 'second'",
-        //     "Example"=>'frist:[1,2],second:[4,5]','status'=>500]);
-        // }
+        if($exception instanceof NotFoundHttpException){
+            return response()->json(["message"=>"for matrix multiplication please use 'http://localhost:8000/matrix'",'status'=>402]);
+        }
         return parent::render($request, $exception);
     }
 }
